@@ -16,24 +16,24 @@ class PaymentMethod {
   });
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = {
-      "type": type.name,
-    };
+  final map = <String, dynamic>{'type': type.name};
 
-    if (type == PaymentType.bank) {
-      data['bank_alias'] = bankAlias;
-      data['account'] = account;
-    }
+  switch (type) {
+    case PaymentType.bank:
+      if (bankAlias != null) map['bank_alias'] = bankAlias;
+      if (account != null) map['account'] = account;
+      break;
 
-    if (type == PaymentType.paybill) {
-      data['paybill'] = paybill;
-      data['account'] = account;
-    }
+    case PaymentType.paybill:
+      if (paybill != null) map['paybill'] = paybill;
+      if (account != null) map['account'] = account;
+      break;
 
-    if (type == PaymentType.buygoods) {
-      data['till_number'] = tillNumber;
-    }
-
-    return data;
+    case PaymentType.buygoods:
+      if (tillNumber != null) map['till_number'] = tillNumber;
+      break;
   }
+
+  return map;
+}
 }

@@ -1,16 +1,63 @@
-# changabot_fundraiser
+# ChangaBot Fundraiser App
 
-A new Flutter project.
+A fully API-integrated Flutter application for creating fundraisers and managing payment methods using the ChangaBot backend.
 
-## Getting Started
+#  Features 
 
-This project is a starting point for a Flutter application.
+- Create Fundraisers
+- Add Payment Methods
+  - Bank
+  - Paybill
+  - Buy Goods (Till Number)
+- Enum-based PaymentType handling
+- REST API Integration
+- Clean model architecture
+- Type-safe Dart implementation
 
-A few resources to get you started if this is your first Flutter project:
+#  Tech Stack 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter
+- Dart
+- REST API
+- JSON Serialization
+- Enum Type Safety
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#  API Endpoints Used 
+
+- GET /banks
+- POST /fundraisers
+- POST /fundraisers/{id}/payment-methods
+
+#  App Structure 
+
+- Models
+  - PaymentMethod
+  - PaymentType (Enum)
+- Screens
+  - Create Fundraiser
+  - Add Payment Method
+- Services
+  - API Integration
+
+# Learning Highlights 
+
+This project demonstrates:
+
+- Handling Dart enums correctly
+- Converting String → Enum safely
+- Type-safe API integration
+- Structured model-based architecture
+- Clean separation of UI and logic
+
+#  Future Improvements 
+
+- Form validation improvements
+- Error handling enhancement
+- State management optimization
+- UI polishing
+- Deployment build
+
+#  Author 
+
+Lucy Mugure  
+Flutter Developer | API Integration Enthusiast

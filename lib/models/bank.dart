@@ -1,23 +1,13 @@
 class Bank {
-  final String name;
   final String alias;
+  final String name;
 
-  Bank({
-    required this.name,
-    required this.alias,
-  });
+  Bank({required this.alias, required this.name});
 
   factory Bank.fromJson(Map<String, dynamic> json) {
     return Bank(
-      name: json['name'] ?? '',
-      alias: json['alias'] ?? '',
+      alias: json['alias'],
+      name: json['name'],
     );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      "name": name,
-      "alias": alias,
-    };
   }
 }
